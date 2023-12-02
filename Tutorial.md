@@ -28,7 +28,7 @@
 
 ### User can access the server via SSH
 
-1. Copy the .ssh directory to the new user's home directory.
+1. Copy the .ssh directory to the new user's home directory. Remember to replace ```<user-name>``` with the new username you created.
 ```
     cp -r /root/.ssh /home/<user-name>
 ```
@@ -106,7 +106,7 @@
     sudo vim /var/www/html/index.html
 ```
 
-2. Copy this sample website or create your own.
+2. Copy and paste this sample website or create your own.
 ```
     <!DOCTYPE html>
     <html lang="en">
@@ -138,7 +138,7 @@
     sudo vim /etc/nginx/sites-available/sample_website
 ```
 
-4. Copy this in the configuration.
+4. Copy and paste this in the configuration.
 ```
     server {
     	listen 80 default_server;
@@ -180,10 +180,14 @@
     sudo systemctl reload nginx
 ```
 
-9. Access your website on your web browser. Use your own server domain or ip address.
+9. View your website code with ```curl```. Replace the ip address with your own server ip.
+```
+    curl 146.190.159.125
+```
+
+10. Access your website on your web browser. Use your own server domain or ip address.
 ```
     http://146.190.159.125
 ```
-
 
 Congratulations! You've successfully set up a Debian 12 server on DigitalOcean, created a new user with administrative privileges that has bash as login shell, configured SSH access, prevented root user SSH access, installed Nginx, and configured it to serve a sample website.
