@@ -61,7 +61,7 @@
     sudo vim /etc/ssh/sshd_config
 ```
 
-2. Find the line **PermitRootLogin yes** and change it to **PermitRootLogin no**. Save and exit the editor using the code ```:wq```.
+2. Find the line ```PermitRootLogin yes``` and change it to ```PermitRootLogin no```. Save and exit the editor using the code ```:wq```.
 
 3. Restart the SSH service to apply the changes.
 ```
@@ -182,9 +182,4 @@
 ```
 
 
-Congratulations! You've successfully set up a Debian 12 server on DigitalOcean, created a new user with administrative privileges, configured SSH access, prevented root user SSH access, installed Nginx, and configured it to serve a sample website.
-
-
-
-
-Note: ```-a``` appends the user to the specified group without removing the user from any other groups they might already belong to. ```-G``` is used to specify the supplementary groups of which the user is a member. In this command, it adds the user to the 'sudo' group.
+Congratulations! You've successfully set up a Debian 12 server on DigitalOcean, created a new user with administrative privileges that has bash as login shell, configured SSH access, prevented root user SSH access, installed Nginx, and configured it to serve a sample website.
