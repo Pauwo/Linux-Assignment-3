@@ -40,10 +40,10 @@
 
 3. Exit from the root session.
 ```
-    logout
+    exit
 ```
 
-4. Log in as your new user.
+4. Log in as your new user. Remember to replace the ip address with your own server ip.
 ```
     ssh -i C:\Users\rjpau\.ssh\do-key <user-name>@146.190.159.125
 ```
@@ -62,6 +62,8 @@
 ```
 
 2. Find the line ```PermitRootLogin yes``` and change it to ```PermitRootLogin no```. Save and exit the editor using the code ```:wq```.
+   
+![PermitRootLogin](/images/permitrootlogin.png)
 
 3. Restart the SSH service to apply the changes.
 ```
@@ -95,7 +97,7 @@
     sudo systemctl status nginx
 ```
 
-
+![nginx status](/images/nginxstatus.png)
 
 ## Configure Nginx to Serve a Sample Website
 
@@ -170,6 +172,8 @@
 ```
     sudo nginx -t
 ```
+
+![Test Nginx Configuration](/images/testnginxconfig.png)
 
 8. Reload nginx to apply changes.
 ```
